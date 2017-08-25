@@ -7,6 +7,7 @@ import {
   TextInput,
   View
 } from 'react-native';
+import Icon from 'react-native-vector-icons/Ionicons';
 
 class Autocomplete extends Component {
   static propTypes = {
@@ -77,7 +78,7 @@ class Autocomplete extends Component {
     onStartShouldSetResponderCapture: () => false,
     renderItem: rowData => <Text>{rowData}</Text>,
     renderSeparator: null,
-    renderTextInput: props => <TextInput {...props} />
+    renderTextInput: props => <TextInput {...props} clearButtonMode={'always'} clearTextOnFocus={true} />
   };
 
   constructor(props) {
@@ -201,9 +202,14 @@ const iosStyles = {
     ...border
   },
   input: {
-    backgroundColor: 'white',
-    height: 40,
-    paddingLeft: 3
+    alignSelf: 'stretch',
+    height: 30,
+    width: 250,
+    marginLeft: 10,
+    backgroundColor: '#FFF',
+    borderColor: 'lightblue',
+    borderRadius: 4,
+    marginBottom: 0
   },
   list: {
     ...border,
