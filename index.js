@@ -5,9 +5,11 @@ import {
   StyleSheet,
   Text,
   TextInput,
-  View
+  View,
+  Dimensions
 } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
+const {height, width} = Dimensions.get('window');
 
 class Autocomplete extends Component {
   static propTypes = {
@@ -204,7 +206,7 @@ const iosStyles = {
   input: {
     alignSelf: 'stretch',
     height: 30,
-    width: 250,
+    flex: 0.7,
     marginLeft: 10,
     backgroundColor: '#FFF',
     borderColor: 'lightblue',
@@ -217,7 +219,8 @@ const iosStyles = {
     borderTopWidth: 0,
     left: 0,
     position: 'absolute',
-    right: 0
+    right: 0,
+    height: height*2/3-50
   }
 };
 
