@@ -205,7 +205,8 @@ const iosStyles = {
   },
   input: {
     alignSelf: 'stretch',
-    height: 30,
+    height: 40,
+    marginTop: 5,
     flex: 0.7,
     marginLeft: 10,
     backgroundColor: '#FFF',
